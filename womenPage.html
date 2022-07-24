@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <title>Women's page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Womens Page</title>
+      </head>
+
+      <style>
+        #maindiv {
+          display: flex;
+          justify-content: space-around;
+        }
+
+        #leftBox {
+          display: grid;
+          grid-template-columns: repeat(1, 300px);
+          height: 300px;
+          position: sticky;
+          top: 50px;
+          margin-top: 20px;
+        }
+
+        #leftBox > select {
+          border-style: none;
+          border-bottom: 1px solid grey;
+          font-size: 16px;
+        }
+
+        #box1 {
+          text-align: center;
+          padding-top: 10px;
+          opacity: 0.8;
+          /* width:330px; */
+        }
+        img {
+          height: 350px;
+        }
+        img:hover {
+          opacity: 0.5;
+          cursor: pointer;
+          z-index: -1;
+        }
+        #name {
+          font-size: 16px;
+          font-weight: bold;
+        }
+        #container {
+          display: grid;
+          grid-template-columns: repeat(3, 300px);
+          gap: 10px;
+          margin-top: 150px;
+        }
+
+        #price {
+          display: flex;
+        }
+        #price > p {
+          margin: 0px;
+          padding: 0px 10px;
+          font-size: 20px;
+        }
+        #price > p:nth-child(1) {
+          color: black;
+          font-weight: bold;
+        }
+        #price > p:nth-child(2) {
+          color: grey;
+          text-decoration: line-through;
+        }
+        #box #offer {
+          margin: 0px;
+          background-color: gainsboro;
+          padding: 5px 15px;
+          font-size: 18px;
+          border-radius: 5px;
+        }
+
+        #box {
+          display: flex;
+          flex-direction: column;
+          width: 300px;
+          object-fit: cover;
+        }
+        span {
+          color: rgb(145, 133, 133);
+          font-weight: normal;
+          font-size: 25px;
+        }
+        #box button {
+          padding: 10px;
+          border-radius: 10px;
+          color: white;
+          font-size: 20px;
+          font-weight: 500;
+          background-color: #8a2be2;
+          border-style: none;
+          box-shadow: 2px 1px 3px 1px #888888;
+          margin-top: 5px;
+        }
+        #sortprice {
+          width: 150px;
+          height: 30px;
+          position: absolute;
+          left: 1160px;
+          top: 150px;
+          font-size: 16px;
+          color: #888888;
+          border-style: none;
+        }
+        #sortprice option {
+          font-size: 20px;
+          padding: 10px;
+          text-align: center;
+          border-style: none;
+          line-height: 25px;
+        }
+        #leftBox > p {
+          font-size: 16px;
+          color: #888888;
+        }
+        /* ------------------------- */
+        #visible,
+        #visible1,
+        #visible2,
+        #visible3,
+        #visible4,
+        #visible5,
+        #visible6,
+        #visible7,
+        #visible8 {
+          display: none;
+        }
+        #sortcategory,
+        #sortsize,
+        #sortbrand,
+        #sortcolor,
+        #sortdesign,
+        #sortfit,
+        #sortsleeve,
+        #sortneck,
+        #sortrating {
+          text-decoration: none;
+          margin: 0px;
+          padding: 0px;
+          font-size: 20px;
+          list-style: none;
+          line-height: 40px;
+        }
+        #sortcategory li a,
+        #sortsize li a,
+        #sortbrand li a,
+        #sortcolor li a,
+        #sortdesign li a,
+        #sortfit li a,
+        #sortsleeve li a,
+        #sortneck li a,
+        #sortrating li a {
+          text-decoration: none;
+          color: black;
+          font-size: 20px;
+          padding: 10px;
+        }
+        #sortcategory i,
+        #sortsize i,
+        #sortbrand i,
+        #sortcolor i,
+        #sortdesign i,
+        #sortfit i,
+        #sortsleeve i,
+        #sortneck i,
+        #sortrating i {
+          padding-left: 10px;
+        }
+        #sortcategory > li,
+        #sortsize > li,
+        #sortbrand > li,
+        #sortcolor > li,
+        #sortdesign > li,
+        #sortfit > li,
+        #sortsleeve > li,
+        #sortneck > li,
+        #sortrating > li {
+          border-bottom: 1px solid black;
+        }
+        #visible li a,
+        #visible1 li a,
+        #visible2 li a,
+        #visible3 li a,
+        #visible4 li a,
+        #visible5 li a,
+        #visible6 li a,
+        #visible7 li a,
+        #visible8 li a {
+          text-decoration: none;
+          color: black;
+          font-size: 20px;
+          padding: 10px;
+        }
+        #visible > li,
+        #visible1 > li,
+        #visible2 > li,
+        #visible3 > li,
+        #visible4 > li,
+        #visible5 > li,
+        #visible6 > li,
+        #visible7 > li,
+        #visible8 > li {
+          list-style: none;
+        }
+        /* .navbar {
+          height: 20px;
+        } */
+        #p-logo img {
+          height: auto;
+        }
+        /* ------------------------- */
+        @media all and (min-width: 80px) and (max-width: 400px) {
+          #container {
+            grid-template-columns: repeat(1, 1fr);
+          }
+        }
+      </style>
+      <body>
+        <!-- starting of header -->
+        <div id="topbar">
+          <div class="left">
+            <div>
+              <a href="">Offer</a>
+              <a href="">Fanbook</a>
+              <a href=""
+                ><i class="fa fa-mobile" aria-hidden="true"></i> Download app</a
+              >
+              <a href="">TriBe Membership</a>
+            </div>
+          </div>
+          <div class="right">
+            <a href="">Contact Us</a>
+            <a href=""
+              ><i class="fa fa-truck" aria-hidden="true"></i> Track Order</a
+            >
+          </div>
+        </div>
+
+        <div id="navbar">
+          <div class="navleft">
+            <div id="p-logo">
+              <a href="/index.html"
+                ><img
+                  src="./image/bewakoof-primary-logo-white-bg-2x-1635745564.png"
+                  alt=""
+              /></a>
+            </div>
+            <div>
+              <a href="./menPage.html">MEN</a>
+              <div class="Msub-menu">
+                <ul>
+                  <h3>Top Wears</h3>
+                  <li>T-Shirts</li>
+                  <li>Shirts</li>
+                  <li>Jackets</li>
+                  <li>Sweater</li>
+                </ul>
+              </div>
+            </div>
+            <div>
+              <a href="./womenPage.html">WOMEN</a>
+            </div>
+            <div>
+              <a href="/Mobile_main_page.html">MOBILE COVERS</a>
+            </div>
+          </div>
+          <div class="navright">
+            <div class="searchForm">
+              <form class="navForm">
+                <i id="searchIcon" class="fa fa-search" aria-hidden="true"></i>
+                <input
+                  type="text"
+                  name=""
+                  id="search"
+                  placeholder="Seach by Catagory, Product or collection"
+                  |
+                />
+              </form>
+            </div>
+            <div>
+              <a href="/login.html"> signUp/Login</a>
+            </div>
+            <div>
+              <a href="#"> <i class="fa fa-heart-o" aria-hidden="true"></i> </a>
+            </div>
+            <div>
+              <a href="/Cart.html"
+                ><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- end of header -->
+        <h4>Home / Women Clothing</h4>
+        <div id="maindiv">
+          <select id="sortprice" onchange="handlepriceSort()">
+            <option value="">Sort By price</option>
+            <option value="htl">High to Low</option>
+            <option value="lth">Low to High</option>
+          </select>
+          <!-- filtter  -->
+          <div id="leftBox">
+            <h2>Women's Clothing<span id="countItem"></span></h2>
+
+            <p>FILTERS</p>
+
+            <ul id="sortcategory" onchange="handlecategorySort()">
+              <li>
+                <a href="">Category <i class="fa-solid fa-angle-down"></i></a>
+              </li>
+              <ul id="visible">
+                <li><a href="">T-shirt</a></li>
+                <li><a href="">Top</a></li>
+                <li><a href="">Kurti</a></li>
+                <li><a href="">Palazzo</a></li>
+              </ul>
+            </ul>
+
+            <ul id="sortsize" onchange="handlesizeSort()">
+              <li>
+                <a href="">Size <i class="fa-solid fa-angle-down"></i></a>
+              </li>
+              <ul id="visible1">
+                <li><a href="">Small</a></li>
+                <li><a href="">Top</a></li>
+                <li><a href="">Medium</a></li>
+                <li><a href="">Large</a></li>
+                <li><a href="">XL</a></li>
+              </ul>
+            </ul>
+
+            <ul id="sortbrand" onchange="handlebrandSort()">
+              <li>
+                <a href="">Brand <i class="fa-solid fa-angle-down"></i></a>
+              </li>
+              <ul id="visible2">
+                <li><a href="">Bewakoof</a></li>
+                <li><a href="">Clovia</a></li>
+                <li><a href="">Dilinger</a></li>
+                <li><a href="">Dilinger</a></li>
+                <li><a href="">Harpa</a></li>
+              </ul>
+            </ul>
+
+            <ul id="sortcolor" onchange="handlecoloeSort()">
+              <li>
+                <a href="">Color <i class="fa-solid fa-angle-down"></i></a>
+              </li>
+              <ul id="visible3">
+                <li><a href="">red</a></li>
+                <li><a href="">black</a></li>
+                <li><a href="">blue</a></li>
+                <li><a href="">pink</a></li>
+              </ul>
+            </ul>
+
+            <ul id="sortdesign" onchange="handledesignSort()">
+              <li>
+                <a href="">Design <i class="fa-solid fa-angle-down"></i></a>
+              </li>
+              <ul id="visible4">
+                <li><a href="">printer</a></li>
+                <li><a href="">solid</a></li>
+                <li><a href="">plain</a></li>
+                <li><a href="">Typography</a></li>
+              </ul>
+            </ul>
+
+            <ul id="sortfit" onchange="handlefitSort()">
+              <li>
+                <a href="">Fit <i class="fa-solid fa-angle-down"></i></a>
+              </li>
+              <ul id="visible5">
+                <li><a href="">Regulat Fit</a></li>
+                <li><a href="">Slim Fit</a></li>
+                <li><a href="">Oversized</a></li>
+                <li><a href="">relaxed</a></li>
+              </ul>
+            </ul>
+
+            <ul id="sortsleeve" onchange="handlesleeveSort()">
+              <li>
+                <a href="">Sleeve <i class="fa-solid fa-angle-down"></i></a>
+              </li>
+              <ul id="visible6">
+                <li><a href="">Half_Sleeve</a></li>
+                <li><a href="">Full_Sleeve</a></li>
+                <li><a href="">Sleeveless</a></li>
+                <li><a href="">Long_Sleeve</a></li>
+              </ul>
+            </ul>
+
+            <ul id="sortneck" onchange="handleneckSort()">
+              <li>
+                <a href="">Neck <i class="fa-solid fa-angle-down"></i></a>
+              </li>
+              <ul id="visible7">
+                <li><a href="">Round_Neck</a></li>
+                <li><a href="">V-Neck</a></li>
+                <li><a href="">shoulder_Straps</a></li>
+                <li><a href="">Collar</a></li>
+              </ul>
+            </ul>
+
+            <ul id="sortrating" onchange="handleratingSort()">
+              <li>
+                <a href="">Rating <i class="fa-solid fa-angle-down"></i></a>
+              </li>
+              <ul id="visible8">
+                <li><a href="">4.5_and_above</a></li>
+                <li><a href="">4_and_above</a></li>
+                <li><a href="">3.5_and_above</a></li>
+                <li><a href="">3_and_above</a></li>
+              </ul>
+            </ul>
+          </div>
+          <!-- filter -->
+          <div id="container"></div>
+        </div>
+      </body>
+    </html>
+
+    <script>
+      var womensData = [
+        {
+          mainImg:
+            "https://images.bewakoof.com/t320/scary-list-boyfriend-t-shirt-483035-1648447161-1.jpg",
+          name: "WOMEN'S Pink Scary List Typography T-shirt ",
+          price: "549",
+          strikeOffPrice: "799 ",
+          stock: "",
+          offer: "450 For TriBe Members",
+        },
+        {
+          mainImg:
+            "https://images.bewakoof.com/t320/one-with-the-universe-boyfriend-t-shirt-483055-1648223195-1.jpg",
+          name: "WOMEN'S Black One With The Universe  T-shirt",
+          price: "649",
+          strikeOffPrice: "799 ",
+          stock: "FEW LEFT",
+          offer: "550 For TriBe Members",
+        },
+        {
+          mainImg:
+            "https://images.bewakoof.com/t320/oops-boyfriend-t-shirt-483039-1648528775-1.jpg",
+          name: "WOMEN'S Yellow Oops Graphic The Universe T-shirt ",
+          price: "749",
+          strikeOffPrice: "899 ",
+          stock: "",
+          offer: "599 For TriBe Members",
+        },
+        {
+          mainImg:
+            "https://images.bewakoof.com/t320/nasa-astronaut-boyfriend-t-shirt-481830-1648011725-1.jpg",
+          name: "WOMEN'S Red NASA Astronaut  T-shirt",
+          price: "999",
+          strikeOffPrice: "1100 ",
+          stock: "FEW LEFT",
+          offer: "600 For TriBe Members",
+        },
+        {
+          mainImg:
+            "https://images.bewakoof.com/t320/enough-nonsense-boyfriend-t-shirt-481831-1648011681-1.jpg",
+          name: "WOMEN'S Blue Enough Nonsense  T-shirt",
+          price: "699",
+          strikeOffPrice: "799 ",
+          stock: "FEW LEFT",
+          offer: "555 For TriBe Members",
+        },
+        {
+          mainImg:
+            "https://images.bewakoof.com/t320/perfect-balance-473311-1645723886-1.jpg",
+          name: "WOMEN'S Purple I Decide  T-shirt",
+          price: "1299",
+          strikeOffPrice: "1500",
+          stock: "",
+          offer: "850 For TriBe Members",
+        },
+        {
+          mainImg:
+            "https://images.bewakoof.com/t320/polar-bear-home-round-neck-3-4-sleeve-t-shirts-navy-blue-women-s-printed-round-neck-3-4-sleeve-t-shirts-343172-1615968877.jpg",
+          name: "Polar Bear Home",
+          price: "649",
+          strikeOffPrice: "799 ",
+          stock: "FEW LEFT",
+          offer: "560 For TriBe Members",
+        },
+        {
+          mainImg:
+            "https://images.bewakoof.com/t320/busy-doin-nothing-dl-women-s-round-neck-3-4-sleeve-t-shirt-468813-1645080147-1.jpg",
+          name: "Wonder Women Gold Plated",
+          price: "689",
+          strikeOffPrice: "709 ",
+          stock: "",
+          offer: "550 For TriBe Members",
+        },
+        {
+          mainImg:
+            "https://images.bewakoof.com/t320/garfield-squad-half-sleeve-t-shirt-479583-1645859185-1.jpg",
+          name: "Garfield Squad Half Sleeve T-shirt",
+          price: "649",
+          strikeOffPrice: "799 ",
+          stock: "",
+          offer: "590 For TriBe Members",
+        },
+        {
+          mainImg:
+            "https://images.bewakoof.com/t320/not-so-wine-full-sleeve-t-shirt-449164-1638276087-1.jpg",
+          name: "Not So Wine Full Sleeve",
+          price: "609",
+          strikeOffPrice: "799 ",
+          stock: "FEW LEFT",
+          offer: "590 For TriBe Members",
+        },
+        {
+          mainImg:
+            "https://images.bewakoof.com/t320/hello-sunshine-473040-1644250764-1.jpg",
+          name: "Hello Sunsine Full Sleeve ",
+          price: "649",
+          strikeOffPrice: "799 ",
+          stock: "FEW LEFT",
+          offer: "550 For TriBe Members",
+        },
+        {
+          mainImg:
+            "https://images.bewakoof.com/t320/less-is-more-465158-1643366030-1.jpg",
+          name: "Less is more Elbow Sleeve T-shirt",
+          price: "649",
+          strikeOffPrice: "790 ",
+          stock: "",
+          offer: "550 For TriBe Members",
+        },
+        {
+          mainImg:
+            "https://images.bewakoof.com/t320/bachelor-button-snow-white-plus-size-color-block-hoodie-t-shirt-465083-1643562711-1.jpg",
+          name: "Upbeat Blue Size Color ",
+          price: "649",
+          strikeOffPrice: "799 ",
+          stock: "FEW LEFT",
+          offer: "550 For TriBe Members",
+        },
+        {
+          mainImg:
+            "https://images.bewakoof.com/t320/memphis-pattern-pyjama-womens-new-printed-pyjama-273017-1599913326.jpg",
+          name: "WOMEN'S REEBOK PRINT LEGGINGS ",
+          price: "649",
+          strikeOffPrice: "790 ",
+          stock: "FEW LEFT",
+          offer: "550 For TriBe Members",
+        },
+        {
+          mainImg:
+            "https://rukminim2.flixcart.com/image/495/594/kwgpz0w0/kurta/m/x/3/m-zhelum-plain-black-white-zhelum-homes-original-imag953gca9wazmz.jpeg?q=50",
+          name: "Memphis Pattern Pyjama",
+          price: 1249,
+          strikeOffPrice: 1749,
+          stock: "",
+          offer: "550 For TriBe Members",
+        },
+        {
+          mainImg:
+            "https://images.bewakoof.com/t320/olive-plus-size-full-sleeve-high-neck-dress-418226-1646130135-1.jpg",
+          name: "Women's Olive color Block ",
+          price: "749",
+          strikeOffPrice: "899 ",
+          stock: "FEW LEFT",
+          offer: "550 For TriBe Members",
+        },
+        {
+          mainImg:
+            "https://images.bewakoof.com/t320/ceylon-yellow-pocket-t-shirt-417944-1643282718-1.jpg",
+          name: "Ceylon Yellow Jumbo Pocket T-shirt",
+          price: "799",
+          strikeOffPrice: "899 ",
+          stock: "FEW LEFT",
+          offer: "550 For TriBe Members",
+        },
+        {
+          mainImg:
+            "https://images.bewakoof.com/t320/navy-round-neck-sleeveless-tshirt-dress-392366-1635411606-1.jpg",
+          name: "Women's Black & White Striped",
+          price: "749",
+          strikeOffPrice: "899 ",
+          stock: "",
+          offer: "550 For TriBe Members",
+        },
+        {
+          mainImg:
+            "https://images.bewakoof.com/t320/women-s-round-neck-3-4-sleeve-t-shirts-combo-white-white-women-s-round-neck-3-4-sleeve-t-shirts-pack-of-2-same-t-shirt-325802-1613538905.jpg",
+          name: "Women's Round Neck Sleeve",
+          price: "749",
+          strikeOffPrice: "999 ",
+          stock: "FEW LEFT",
+          offer: "550 For TriBe Members",
+        },
+        {
+          mainImg:
+            "https://images.bewakoof.com/t320/sleepy-head-dl-boyfriend-t-shirt-481847-1648095024-1.jpg",
+          name: "Women's Green Sleepy Head",
+          price: "749",
+          strikeOffPrice: "899 ",
+          stock: "FEW LEFT",
+          offer: "550 For TriBe Members",
+        },
+        {
+          mainImg:
+            "https://images.bewakoof.com/t320/unique-minnie-half-sleeve-t-shirt-dl-white-women-s-half-sleeve-printed-t-shirt-289019-1601626144.jpg",
+          name: "Women T-shirt",
+          price: "749",
+          strikeOffPrice: "899 ",
+          stock: "FEW LEFT",
+          offer: "560 For TriBe Members",
+        },
+        {
+          mainImg:
+            "https://images.bewakoof.com/t320/bachelor-button-loose-fit-longline-drop-shoulder-t-shirt-463559-1643559709-1.jpg",
+          name: "Women's Blue supper Loose",
+          price: "749",
+          strikeOffPrice: "990 ",
+          stock: "FEW LEFT",
+          offer: "550 For TriBe Members",
+        },
+        {
+          mainImg:
+            "https://images.bewakoof.com/t320/bachelor-button-snow-white-jasmin-green-diagonal-color-block-t-shirt-463939-1643562863-1.jpg",
+          name: "Upbeat Blue Plus Size",
+          price: "1049",
+          strikeOffPrice: "999 ",
+          stock: "FEW LEFT",
+          offer: "550 For TriBe Members",
+        },
+        {
+          mainImg:
+            "https://images.bewakoof.com/t320/more-pizza-half-sleeve-t-shirt-479510-1645794846-1.jpg",
+          name: "More Pizza Halp Sleeve T-shirt",
+          price: "789",
+          strikeOffPrice: "899 ",
+          stock: "FEW LEFT",
+          offer: "550 For TriBe Members",
+        },
+        {
+          mainImg:
+            "https://images.bewakoof.com/t320/jasmin-green-full-sleeve-t-shirts-459205-1645890303-1.jpg",
+          name: "Chilled Out Full Sleeve T-shirt",
+          price: "749",
+          strikeOffPrice: "899 ",
+          stock: "FEW LEFT",
+          offer: "550 For TriBe Members",
+        },
+        {
+          mainImg:
+            "https://images.bewakoof.com/t320/black-camo-plain-shoulder-sleeves-panel-half-sleeves-camo-t-shirt-women-s-plain-shoulder-sleeves-panel-half-sleeves-camo-t-shirt-277578-1605197163.jpg",
+          name: "Black Camo Plain Shoulder Sleeve",
+          price: "749",
+          strikeOffPrice: "856 ",
+          stock: "FEW LEFT",
+          offer: "550 For TriBe Members",
+        },
+        {
+          mainImg:
+            "https://images.bewakoof.com/t320/chill-pop-half-sleeve-t-shirt-475187-1645000533-1.jpg",
+          name: "Chill Pop Half Sleeve T-shirt ",
+          price: "749",
+          strikeOffPrice: "899 ",
+          stock: "FEW LEFT",
+          offer: "550 For TriBe Members",
+        },
+        {
+          mainImg:
+            "https://images.bewakoof.com/t320/women-s-half-sleeve-t-shirt-pack-of-2-combo-whtie-red-women-s-half-sleeve-t-shirt-pack-of-2-combo-325684-1613539095.jpg",
+          name: "Women's Half Sleeve T-shirt",
+          price: "799",
+          strikeOffPrice: "899 ",
+          stock: "FEW LEFT",
+          offer: "580 For TriBe Members",
+        },
+        {
+          mainImg:
+            "https://images.bewakoof.com/t320/moody-women-s-elbow-sleeve-round-neck-t-shirt-468842-1645207431-1.jpg",
+          name: "Moody Women's Elbow Sleeve",
+          price: "749",
+          strikeOffPrice: "899 ",
+          stock: "FEW LEFT",
+          offer: "650 For TriBe Members",
+        },
+        {
+          mainImg:
+            "https://images.bewakoof.com/t320/stripe-cola-cola-463259-1645165810-1.jpg",
+          name: "Enjoy Coca Cola Raglan",
+          price: "699",
+          strikeOffPrice: "899 ",
+          stock: "FEW LEFT",
+          offer: "550 For TriBe Members",
+        },
+        {
+          mainImg:
+            "https://images.bewakoof.com/t320/purple-portion-sangaria-cut-n-sew-full-sleeve-t-shirt-447959-1641390205-1.jpg",
+          name: "Not So Wine Cut N Sew Full",
+          price: "749",
+          strikeOffPrice: "889 ",
+          stock: "FEW LEFT",
+          offer: "550 For TriBe Members",
+        },
+        {
+          mainImg:
+            "https://images.bewakoof.com/t320/jasmin-green-full-sleeve-t-shirts-459205-1645890303-1.jpg",
+          name: "Chilled Out Full Sleeve T-shirt",
+          price: "799",
+          strikeOffPrice: "899 ",
+          stock: "FEW LEFT",
+          offer: "550 For TriBe Members",
+        },
+        {
+          mainImg:
+            "https://images.bewakoof.com/t320/black-camo-plain-shoulder-sleeves-panel-half-sleeves-camo-t-shirt-women-s-plain-shoulder-sleeves-panel-half-sleeves-camo-t-shirt-277578-1605197163.jpg",
+          name: "Black Camo Plain Shoulder Sleeve",
+          price: "749",
+          strikeOffPrice: "899 ",
+          stock: "FEW LEFT",
+          offer: "550 For TriBe Members",
+        },
+        {
+          mainImg:
+            "https://images.bewakoof.com/t320/chill-pop-half-sleeve-t-shirt-475187-1645000533-1.jpg",
+          name: "Chill Pop Half Sleeve T-shirt ",
+          price: "749",
+          strikeOffPrice: "890 ",
+          stock: "FEW LEFT",
+          offer: "550 For TriBe Members",
+        },
+        {
+          mainImg:
+            "https://images.bewakoof.com/t320/women-s-half-sleeve-t-shirt-pack-of-2-combo-whtie-red-women-s-half-sleeve-t-shirt-pack-of-2-combo-325684-1613539095.jpg",
+          name: "Women's Half Sleeve T-shirt",
+          price: "749",
+          strikeOffPrice: "899 ",
+          stock: "FEW LEFT",
+          offer: "550 For TriBe Members",
+        },
+        {
+          mainImg:
+            "https://images.bewakoof.com/t320/moody-women-s-elbow-sleeve-round-neck-t-shirt-468842-1645207431-1.jpg",
+          name: "Moody Women's Elbow Sleeve",
+          price: "749",
+          strikeOffPrice: "990 ",
+          stock: "FEW LEFT",
+          offer: "550 For TriBe Members",
+        },
+        {
+          mainImg:
+            "https://images.bewakoof.com/t320/stripe-cola-cola-463259-1645165810-1.jpg",
+          name: "Enjoy Coca Cola Raglan",
+          price: "749",
+          strikeOffPrice: "899 ",
+          stock: "FEW LEFT",
+          offer: "550 For TriBe Members",
+        },
+
+        {
+          mainImg:
+            "https://rukminim2.flixcart.com/image/495/594/kqv8vww0/kurta/y/j/n/3xl-nit-567-nitvan-original-imag4s2nk2czy3dt.jpeg?q=50",
+          name: "Enjoy Coca Cola Raglan",
+          price: "1800",
+          strikeOffPrice: "2000 ",
+          stock: "FEW LEFT",
+          offer: "1500 For TriBe Members",
+        },
+        {
+          mainImg:
+            "https://rukminim2.flixcart.com/image/495/594/kzzw5u80/ethnic-set/a/o/j/xxl-stylish611navyblue-new-stylish-original-imagbvstc76uajvg.jpeg?q=50",
+          name: "Enjoy Coca Cola Raglan",
+          price: "749",
+          strikeOffPrice: "899 ",
+          stock: "FEW LEFT",
+          offer: "550 For TriBe Members",
+        },
+        {
+          mainImg:
+            "https://rukminim2.flixcart.com/image/495/594/kd7pevk0/trouser/c/z/v/free-tdzsp103-blue-trendzmy-original-imafu62awpnqyz2w.jpeg?q=50",
+          name: "Enjoy Coca Cola Raglan",
+          price: "1499",
+          strikeOffPrice: "1699 ",
+          stock: "FEW LEFT",
+          offer: "1299 For TriBe Members",
+        },
+        {
+          mainImg:
+            "https://rukminim2.flixcart.com/image/495/594/jxw5g280/trouser/m/3/e/free-bk-fre-t-rock-original-imafg8wfvff7gmzu.jpeg?q=50",
+          name: "Enjoy Coca Cola Raglan",
+          price: "1450",
+          strikeOffPrice: "1650 ",
+          stock: "FEW LEFT",
+          offer: "1350 For TriBe Members",
+        },
+        {
+          mainImg:
+            "https://rukminim2.flixcart.com/image/495/594/kyj0vbk0/kurta/e/k/s/xxl-kurta-1014-designer-kurti-cotton-kurta-stright-kurti-casual-original-imagaqntatpbrgws.jpeg?q=50",
+          name: "Enjoy Coca Cola Raglan",
+          price: "1200",
+          strikeOffPrice: "1500 ",
+          stock: "FEW LEFT",
+          offer: "1100 For TriBe Members",
+        },
+      ];
+
+      function handlepriceSort() {
+        var selected = document.querySelector("#sortprice").value;
+        console.log(selected);
+        if (selected == "htl") {
+          womensData.sort(function (a, b) {
+            return b.price - a.price;
+          });
+          displayData(womensData);
+        }
+
+        if (selected == "lth") {
+          womensData.sort(function (a, b) {
+            return a.price - b.price;
+          });
+          displayData(womensData);
+        }
+      }
+
+      window.addEventListener("load", function () {
+        displayData(womensData);
+      });
+
+      var cartData = JSON.parse(localStorage.getItem("cart")) || [];
+
+      function displayData() {
+        document.querySelector("#container").innerHTML = "";
+        womensData.map(function (elem) {
+          var box = document.createElement("div");
+          box.id = "box";
+
+          var box1 = document.createElement("div");
+          box1.id = "box1";
+          box1.style.color = "white";
+          box1.style.background = "black";
+          box1.style.height = "30px";
+          box1.innerText = "DESIGN OF THE DAY";
+
+          var length = womensData.length;
+          document.querySelector("#countItem").innerText = `(${length})`;
+
+          var img = document.createElement("img");
+          img.src = elem.mainImg;
+
+          var name = document.createElement("p");
+          name.id = "name";
+          name.textContent = elem.name;
+          // price
+          var price_div = document.createElement("div");
+          price_div.id = "price";
+          var price = document.createElement("p");
+          price.innerText = "₹" + " " + elem.price;
+          var strikeOffPrice = document.createElement("p");
+          strikeOffPrice.innerText = elem.strikeOffPrice;
+          var stock = document.createElement("p");
+
+          stock.innerText = elem.stock;
+          stock.style.back = "red";
+
+          price_div.append(price, strikeOffPrice, stock);
+          // price
+
+          var offer = document.createElement("p");
+          offer.id = "offer";
+          offer.innerText = elem.offer;
+
+          var btn = document.createElement("button");
+          btn.innerText = "Add to Cart";
+          btn.addEventListener("click", function () {
+            addToCart(elem);
+          });
+
+          box.append(img, box1, name, price_div, offer, btn);
+
+          document.querySelector("#container").append(box);
+        });
+
+        function addToCart(elem) {
+          console.log(elem);
+          cartData.push(elem);
+          localStorage.setItem("cart", JSON.stringify(cartData));
+          alert("item added to cart");
+        }
+      }
+    </script>
+    <script>
+      document.querySelector("#sortcategory").addEventListener("click", show);
+      document.querySelector("#sortsize").addEventListener("click", show1);
+      document.querySelector("#sortbrand").addEventListener("click", show2);
+      document.querySelector("#sortcolor").addEventListener("click", show3);
+      // #sortdesign,#sortfit,#sortsleeve,#sortneck,#sortrating
+      document.querySelector("#sortdesign").addEventListener("click", show4);
+      document.querySelector("#sortfit").addEventListener("click", show5);
+      document.querySelector("#sortsleeve").addEventListener("click", show6);
+      document.querySelector("#sortneck").addEventListener("click", show7);
+      document.querySelector("#sortrating").addEventListener("click", show8);
+      function show() {
+        event.preventDefault();
+        var visible = document.querySelector("#visible");
+        if (visible.style.display == "none") {
+          visible.style.display = "block";
+        } else {
+          visible.style.display = "none";
+        }
+      }
+      function show1() {
+        event.preventDefault();
+        var visible1 = document.querySelector("#visible1");
+        if (visible1.style.display == "none") {
+          visible1.style.display = "block";
+        } else {
+          visible1.style.display = "none";
+        }
+      }
+      function show2() {
+        event.preventDefault();
+        var visible2 = document.querySelector("#visible2");
+        if (visible2.style.display == "none") {
+          visible2.style.display = "block";
+        } else {
+          visible2.style.display = "none";
+        }
+      }
+      function show3() {
+        event.preventDefault();
+        var visible3 = document.querySelector("#visible3");
+        if (visible3.style.display == "none") {
+          visible3.style.display = "block";
+        } else {
+          visible3.style.display = "none";
+        }
+      }
+      function show4() {
+        event.preventDefault();
+        var visible4 = document.querySelector("#visible4");
+        if (visible4.style.display == "none") {
+          visible4.style.display = "block";
+        } else {
+          visible4.style.display = "none";
+        }
+      }
+      function show5() {
+        event.preventDefault();
+        var visible5 = document.querySelector("#visible5");
+        if (visible5.style.display == "none") {
+          visible5.style.display = "block";
+        } else {
+          visible5.style.display = "none";
+        }
+      }
+      function show6() {
+        event.preventDefault();
+        var visible6 = document.querySelector("#visible6");
+        if (visible6.style.display == "none") {
+          visible6.style.display = "block";
+        } else {
+          visible6.style.display = "none";
+        }
+      }
+      function show7() {
+        event.preventDefault();
+        var visible7 = document.querySelector("#visible7");
+        if (visible7.style.display == "none") {
+          visible7.style.display = "block";
+        } else {
+          visible7.style.display = "none";
+        }
+      }
+      function show8() {
+        event.preventDefault();
+        var visible8 = document.querySelector("#visible8");
+        if (visible8.style.display == "none") {
+          visible8.style.display = "block";
+        } else {
+          visible8.style.display = "none";
+        }
+      }
+
+      function bookingPage(ele) {
+        var bookingItem = [];
+        bookingItem.push(ele);
+        localStorage.setItem("bookItem", JSON.stringify(bookingItem));
+        window.location.href = "bookingPage.html";
+      }
+    </script>
+  </body>
+</html>

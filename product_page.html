@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script
+      src="https://kit.fontawesome.com/e9a5a74c45.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+   h1{
+           font: 24px montserrat, sans-serif;
+           font-weight: bold;
+           margin-bottom: 40px;
+           margin-left: 150px;
+        
+       }
+       h1>hr{
+           width: 11%;
+           margin-right: 1290px;
+           border:1.3px solid #fdd835 ;
+           background-color: #fdd835;
+           
+        } 
+        #product_container{
+            width: 80%;
+             display: grid;
+             grid-template-columns: repeat(3,1fr);
+             gap: 20px;
+            
+             grid-row-gap: 50px;
+            margin: auto;
+            z-index:-10 ;
+            
+        }  
+     #productMat{
+         text-align: start;
+     }
+     img{
+         height: 80%;
+     }
+     .priceOf{
+         text-decoration: line-through;
+     }
+    img:hover{
+        
+        height: 81%;
+        color: antiquewhite;
+        cursor: pointer;
+        opacity: 0.5 ;
+        z-index:-20;
+               
+         
+         
+}
+p{
+    font-size: 40px;
+}
+
+#countcol{
+    color: #9da3aa;
+}
+button{
+  margin-top: 20px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 0px;
+}
+button:hover{
+  background-color: rgb(239, 238, 183);
+  color: rgb(43, 64, 64);
+}
+
+
+#topbar{
+    display: grid;
+    grid-template-columns: repeat(2,1fr); 
+    font-family:montserrat,sans-serif; 
+    position: sticky; 
+    top:0; 
+}
+#topbar a:hover{
+color:gray;
+
+}
+/* left part */
+.left{
+        display: flex;
+        justify-content: space-evenly;
+        background-color: #eee;
+        height: 20px;
+        box-sizing: border-box;
+        padding: 3px;
+        margin-left: -140px;
+        font-size: 12px;  
+}
+.left a{
+text-decoration: none;
+color: #333333;
+margin: 14px;
+}
+
+/* right part */
+.right{
+    display: flex;
+    justify-content: right;
+    background-color: #eee;
+    box-sizing: border-box;
+    height: 20px;
+    padding: 3px;
+    font-size: 12px;
+}
+.right a{
+    text-decoration: none;
+    color:#333333;
+    margin-right: 3rem;
+}
+/* Navbar */
+
+#navbar{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-top: 0px;
+    padding-top:5px;
+    font-family:montserrat,sans-serif;
+    border-bottom: #5c5a5a 1px solid;
+    background-color:white;
+    position: sticky;
+    top:0px;
+    cursor: pointer;
+    font-size: 14px;
+}
+#navbar a:hover{
+    color: cyan;
+    z-index: 100;
+}
+.navleft{
+    display: flex;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    padding: 5px;
+    margin-top: 10px;
+    font-size: 14px;
+    
+    
+}
+#p-logo{
+    margin-top: 0px;
+}
+#p-logo img{
+    width: 150px;
+    height: 20px;
+    padding: 2px;
+    margin-bottom: 3px;
+}
+.navleft a{
+    text-decoration: none;
+    color: #333333;
+}
+
+.Msub-menu{
+    display:none;
+    margin-top: 20px;
+    position: sticky;
+    top:30px;
+}
+.navleft a:hover+.Msub-menu{
+display: block;
+position: absolute;
+background-color:rgb(250, 195, 15);
+opacity: 0.7;
+color: BLACK;
+position:stiky;
+}
+.Msub-menu ul{
+    list-style: none;
+    display: block;
+    margin-top: 15px ;
+    
+}
+.Msub-menu ul li{
+    width: 150px;
+    padding: 10px;
+    background: transparent;
+    text-align: center;
+    
+}
+.Msub-menu ul h4{
+ text-align: center;
+ border-bottom: 1px dotted;
+}
+
+.navright{
+    display: flex;
+    justify-content: right;
+    margin-right: 30px;
+    box-sizing: border-box;
+    padding: 7px;
+    margin-bottom: px;
+    margin-top: 0px;
+    
+}
+.navright a{
+    text-decoration: none;
+    font-size:14px;
+    color: #333333;
+    margin: 15px;
+}
+
+@media only  screen and (min-width:70px) and (max-width:720px){
+
+  #product_container{
+            display: grid;
+             grid-template-columns: repeat(2,1fr);
+             gap: 30px;
+            
+             grid-row-gap: 30px;
+            /* margin: auto; */
+            
+        }
+        #productMat{
+          height: 200px;
+          width: 150px;
+        }  
+
+}
+
+     
+    </style>
+</head>
+<body>
+
+  
+
+  <div id="navbar">
+    <div class="navleft">
+      <div id="p-logo">
+          <a href="menPage.html"><img src="./image/bewakoof-primary-logo-white-bg-2x-1635745564.png" alt=""></a>
+      </div>
+      <div>
+          <a href="menPage.html">MEN</a>
+          <div class="Msub-menu">
+              <ul> <h3>Top Wears</h3>
+                  <li>T-Shirts</li>
+                  <li>Shirts</li>
+                  <li>Jackets</li>
+                  <li>Sweater</li>
+              </ul>
+          </div>
+      </div>
+      <div>
+          <a href="womenPage.html">WOMEN</a>
+          <div class="Msub-menu">
+            <ul> <h3>Top Wears</h3>
+                <li>T-Shirts</li>
+                <li>Top</li>
+                <li>Kurti</li>
+                <li>Plazo</li>
+            </ul> 
+        </div>
+
+          
+      </div>
+      <div>
+          <a href="Mobile_main_page.html">MOBILE COVERS</a>
+          <div class="Msub-menu">
+            <ul> <h3>Top Covers</h3>
+                <li>Xiaomi</li>
+                <li>One Plus</li>
+                <li>Apple</li>
+                <li>Readmi</li>
+            </ul>
+        </div>
+      </div>
+  </div>
+    <div class="navright">
+        <div class="searchForm">
+            <form class="navForm">
+                <i id="searchIcon" class="fa fa-search" aria-hidden="true"></i>
+                <input type="text" name="" id="search" placeholder="Seach by Catagory, Product or collection" |>
+            </form>
+        </div>
+        <div>
+            <a href="/login.html"> signUp/Login</a>
+        </div>
+        <div>
+            <a href="#"> <i class="fa fa-heart-o" aria-hidden="true"></i>
+            </a>
+        </div>
+        <div>
+            <a href="/Cart.html"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<div id="bigContainer">
+    <div><h1>Redmi 9 Power Back Covers & Cases <span id="countcol"><span>(</span><span id="count"></span><span>)</span></span> <hr></h1> 
+    <div id="product_container">
+        
+    </div>
+</div>
+
+
+
+
+</body>
+</html>
+<script>
+
+
+var cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+
+
+  obj = [
+  {
+      mainImg:
+        "https://images.bewakoof.com/t320/metal-gear-blue-xiaomi-redmi-9-power-mobile-cover-xiaomi-redmi-9-power-mobile-covers-359423-1620679508.jpg",
+      name: `Metal Gear Blue Xiaomi Redmi 9 Power Mobile Covers`,
+      price: "249",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `229 For TriBe Members` ,
+    },
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/naru-xiaomi-redmi-9-power-mobile-cover-471235-1643961747-1.jpg",
+      name: `Naru Xiaomi Redmi 9 Power Mobile Cover`,
+      price: "299",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `279 For TriBe Members` },
+    
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/quirky-camou-xiaomi-redmi-9-power-mobile-cover-472315-1643643842-1.jpg",
+      name: `Quirky Camou Xiaomi Redmi 9 Power Mobile Cover`,
+      price: "299",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `279 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/mickey-dl-hyperprint-camou-xiaomi-redmi-9-power-mobile-cover-472170-1643643806-1.jpg",
+      name: `Mickey(DL) Hyperprint Camou Xiaomi Redmi 9 Power M.. `,
+      price: "249",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `229 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/venom-xiaomi-redmi-9-power-mobile-cover-spl-xiaomi-redmi-9-power-mobile-covers-345494-1620679431.jpg",
+      name: `Venom Xiaomi Redmi 9 Power Mobile Covers(SPL)`,
+      price: "249",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `229 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/comic-page-xiaomi-redmi-9-power-mobile-cover-avl-xiaomi-redmi-9-power-mobile-covers-345496-1620679434.jpg",
+      name: 'Comic Page Xiaomi Redmi 9 Power Mobile Covers (AVL)',
+      price: "249",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `229 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/discover-new-places-xiaomi-redmi-9-power-mobile-cover-xiaomi-redmi-9-power-mobile-covers-345497-1620679435.jpg",
+      name: `Discover New Places Xiaomi Redmi 9 Power Mobile Cover`,
+      price: "249",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `229 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/whatever-it-takes-xiaomi-redmi-9-power-mobile-cover-xiaomi-redmi-9-power-mobile-covers-347137-1617878828.jpg",
+      name: `Whatever It Takes Xiaomi Redmi 9 Power Mobile Cover`,
+      price: "249",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `229 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/mask-man-xiaomi-redmi-9-power-mobile-cover-xiaomi-redmi-9-power-mobile-covers-347145-1617878839.jpg",
+      name: `Mask Man Xiaomi Redmi 9 Power Mobile Cover`,
+      price: "249",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `229 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/they-know-the-way-xiaomi-redmi-9-power-mobile-cover-xiaomi-redmi-9-power-mobile-covers-347139-1617878831.jpg",
+      name: `They Know The Way Xiaomi Redmi 9 Power Mobile Cover`,
+      price: "249",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `229 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/risky-ishq-xiaomi-redmi-9-power-mobile-cover-xiaomi-redmi-9-power-mobile-covers-347140-1620679406.jpg",
+      name: `Risky Ishq Xiaomi Redmi 9 Power Mobile Covers`,
+      price: "249",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `229 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/bong-connection-doodle-xiaomi-redmi-9-power-mobile-cover-xiaomi-redmi-9-power-mobile-covers-346570-1620679443.jpg",
+      name: `Bong Connection Doodle Xiaomi Redmi 9 Power Mobile..`,
+      price: "249",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `229 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/batman-rogue-xiaomi-redmi-9-power-mobile-cover-xiaomi-redmi-9-power-mobile-covers-346577-1620679451.jpg",
+      name: `Batman Rogue Xiaomi Redmi 9 Power Mobile Cover`,
+      price: "249",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `229 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/joint-family-xiaomi-redmi-9-power-mobile-cover-xiaomi-redmi-9-power-mobile-covers-347087-1620679343.jpg",
+      name: `Joint Family Xiaomi Redmi 9 Power Mobile Covers`,
+      price: "249",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `229 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/cool-sporty-xiaomi-redmi-9-power-mobile-cover-xiaomi-redmi-9-power-mobile-covers-346580-1620679453.jpg",
+      name: `Cool Sporty Xiaomi Redmi 9 Power Mobile Covers`,
+      price: "199",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `179 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/wasnt-me-xiaomi-redmi-9-power-mobile-cover-xiaomi-redmi-9-power-mobile-covers-359425-1620679515.jpg",
+      name: `Wasnt Me Xiaomi Redmi 9 Power Mobile Covers`,
+      price: "249",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `229 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/no-excuses-stripe-xiaomi-redmi-9-power-mobile-cover-xiaomi-redmi-9-power-mobile-covers-359415-1620679491.jpg",
+      name: `No Excuses Stripe Xiaome Redmi 9 Power Mobile`,
+      price: "199",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `179 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/spiderman-red-xiaomi-redmi-9-power-mobile-cover-avl-xiaomi-redmi-9-power-mobile-covers-347154-1617878851.jpg",
+      name: `Spiderman Red Xiaomi Redmi 9 Power Mobile Cover(A..`,
+      price: "249",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `229 For TriBe Members` },
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/metal-gear-blue-xiaomi-redmi-9-power-mobile-cover-xiaomi-redmi-9-power-mobile-covers-359423-1620679508.jpg",
+      name: `Metal Gear Blue Xiaomi Redmi 9 Power Mobile Covers`,
+      price: "249",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `229 For TriBe Members` },
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/naru-xiaomi-redmi-9-power-mobile-cover-471235-1643961747-1.jpg",
+      name: `Naru Xiaomi Redmi 9 Power Mobile Cover`,
+      price: "299",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `279 For TriBe Members` },
+    
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/quirky-camou-xiaomi-redmi-9-power-mobile-cover-472315-1643643842-1.jpg",
+      name: `Quirky Camou Xiaomi Redmi 9 Power Mobile Cover`,
+      price: "299",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `279 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/mickey-dl-hyperprint-camou-xiaomi-redmi-9-power-mobile-cover-472170-1643643806-1.jpg",
+      name: `Mickey(DL) Hyperprint Camou Xiaomi Redmi 9 Power M.. `,
+      price: "249",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `229 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/venom-xiaomi-redmi-9-power-mobile-cover-spl-xiaomi-redmi-9-power-mobile-covers-345494-1620679431.jpg",
+      name: `Venom Xiaomi Redmi 9 Power Mobile Covers(SPL)`,
+      price: "249",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `229 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/comic-page-xiaomi-redmi-9-power-mobile-cover-avl-xiaomi-redmi-9-power-mobile-covers-345496-1620679434.jpg",
+      name: 'Comic Page Xiaomi Redmi 9 Power Mobile Covers (AVL)',
+      price: "249",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `229 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/discover-new-places-xiaomi-redmi-9-power-mobile-cover-xiaomi-redmi-9-power-mobile-covers-345497-1620679435.jpg",
+      name: `Discover New Places Xiaomi Redmi 9 Power Mobile Cover`,
+      price: "249",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `229 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/whatever-it-takes-xiaomi-redmi-9-power-mobile-cover-xiaomi-redmi-9-power-mobile-covers-347137-1617878828.jpg",
+      name: `Whatever It Takes Xiaomi Redmi 9 Power Mobile Cover`,
+      price: "249",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `229 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/mask-man-xiaomi-redmi-9-power-mobile-cover-xiaomi-redmi-9-power-mobile-covers-347145-1617878839.jpg",
+      name: `Mask Man Xiaomi Redmi 9 Power Mobile Cover`,
+      price: "249",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `229 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/they-know-the-way-xiaomi-redmi-9-power-mobile-cover-xiaomi-redmi-9-power-mobile-covers-347139-1617878831.jpg",
+      name: `They Know The Way Xiaomi Redmi 9 Power Mobile Cover`,
+      price: "249",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `229 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/risky-ishq-xiaomi-redmi-9-power-mobile-cover-xiaomi-redmi-9-power-mobile-covers-347140-1620679406.jpg",
+      name: `Risky Ishq Xiaomi Redmi 9 Power Mobile Covers`,
+      price: "249",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `229 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/bong-connection-doodle-xiaomi-redmi-9-power-mobile-cover-xiaomi-redmi-9-power-mobile-covers-346570-1620679443.jpg",
+      name: `Bong Connection Doodle Xiaomi Redmi 9 Power Mobile..`,
+      price: "249",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `229 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/batman-rogue-xiaomi-redmi-9-power-mobile-cover-xiaomi-redmi-9-power-mobile-covers-346577-1620679451.jpg",
+      name: `Batman Rogue Xiaomi Redmi 9 Power Mobile Cover`,
+      price: "249",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `229 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/joint-family-xiaomi-redmi-9-power-mobile-cover-xiaomi-redmi-9-power-mobile-covers-347087-1620679343.jpg",
+      name: `Joint Family Xiaomi Redmi 9 Power Mobile Covers`,
+      price: "249",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `229 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/cool-sporty-xiaomi-redmi-9-power-mobile-cover-xiaomi-redmi-9-power-mobile-covers-346580-1620679453.jpg",
+      name: `Cool Sporty Xiaomi Redmi 9 Power Mobile Covers`,
+      price: "199",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `179 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/wasnt-me-xiaomi-redmi-9-power-mobile-cover-xiaomi-redmi-9-power-mobile-covers-359425-1620679515.jpg",
+      name: `Wasnt Me Xiaomi Redmi 9 Power Mobile Covers`,
+      price: "249",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `229 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/no-excuses-stripe-xiaomi-redmi-9-power-mobile-cover-xiaomi-redmi-9-power-mobile-covers-359415-1620679491.jpg",
+      name: `No Excuses Stripe Xiaome Redmi 9 Power Mobile`,
+      price: "199",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `179 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/spiderman-red-xiaomi-redmi-9-power-mobile-cover-avl-xiaomi-redmi-9-power-mobile-covers-347154-1617878851.jpg",
+      name: `Spiderman Red Xiaomi Redmi 9 Power Mobile Cover(A..`,
+      price: "249",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `229 For TriBe Members` },
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/metal-gear-blue-xiaomi-redmi-9-power-mobile-cover-xiaomi-redmi-9-power-mobile-covers-359423-1620679508.jpg",
+      name: `Metal Gear Blue Xiaomi Redmi 9 Power Mobile Covers`,
+      price: "249",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `229 For TriBe Members` },
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/naru-xiaomi-redmi-9-power-mobile-cover-471235-1643961747-1.jpg",
+      name: `Naru Xiaomi Redmi 9 Power Mobile Cover`,
+      price: "299",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `279 For TriBe Members` },
+    
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/quirky-camou-xiaomi-redmi-9-power-mobile-cover-472315-1643643842-1.jpg",
+      name: `Quirky Camou Xiaomi Redmi 9 Power Mobile Cover`,
+      price: "299",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `279 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/mickey-dl-hyperprint-camou-xiaomi-redmi-9-power-mobile-cover-472170-1643643806-1.jpg",
+      name: `Mickey(DL) Hyperprint Camou Xiaomi Redmi 9 Power M.. `,
+      price: "249",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `229 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/venom-xiaomi-redmi-9-power-mobile-cover-spl-xiaomi-redmi-9-power-mobile-covers-345494-1620679431.jpg",
+      name: `Venom Xiaomi Redmi 9 Power Mobile Covers(SPL)`,
+      price: "249",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `229 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/comic-page-xiaomi-redmi-9-power-mobile-cover-avl-xiaomi-redmi-9-power-mobile-covers-345496-1620679434.jpg",
+      name: 'Comic Page Xiaomi Redmi 9 Power Mobile Covers (AVL)',
+      price: "249",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `229 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/discover-new-places-xiaomi-redmi-9-power-mobile-cover-xiaomi-redmi-9-power-mobile-covers-345497-1620679435.jpg",
+      name: `Discover New Places Xiaomi Redmi 9 Power Mobile Cover`,
+      price: "249",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `229 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/whatever-it-takes-xiaomi-redmi-9-power-mobile-cover-xiaomi-redmi-9-power-mobile-covers-347137-1617878828.jpg",
+      name: `Whatever It Takes Xiaomi Redmi 9 Power Mobile Cover`,
+      price: "249",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `229 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/mask-man-xiaomi-redmi-9-power-mobile-cover-xiaomi-redmi-9-power-mobile-covers-347145-1617878839.jpg",
+      name: `Mask Man Xiaomi Redmi 9 Power Mobile Cover`,
+      price: "249",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `229 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/they-know-the-way-xiaomi-redmi-9-power-mobile-cover-xiaomi-redmi-9-power-mobile-covers-347139-1617878831.jpg",
+      name: `They Know The Way Xiaomi Redmi 9 Power Mobile Cover`,
+      price: "249",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `229 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/risky-ishq-xiaomi-redmi-9-power-mobile-cover-xiaomi-redmi-9-power-mobile-covers-347140-1620679406.jpg",
+      name: `Risky Ishq Xiaomi Redmi 9 Power Mobile Covers`,
+      price: "249",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `229 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/bong-connection-doodle-xiaomi-redmi-9-power-mobile-cover-xiaomi-redmi-9-power-mobile-covers-346570-1620679443.jpg",
+      name: `Bong Connection Doodle Xiaomi Redmi 9 Power Mobile..`,
+      price: "249",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `229 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/batman-rogue-xiaomi-redmi-9-power-mobile-cover-xiaomi-redmi-9-power-mobile-covers-346577-1620679451.jpg",
+      name: `Batman Rogue Xiaomi Redmi 9 Power Mobile Cover`,
+      price: "249",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `229 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/joint-family-xiaomi-redmi-9-power-mobile-cover-xiaomi-redmi-9-power-mobile-covers-347087-1620679343.jpg",
+      name: `Joint Family Xiaomi Redmi 9 Power Mobile Covers`,
+      price: "249",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `229 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/cool-sporty-xiaomi-redmi-9-power-mobile-cover-xiaomi-redmi-9-power-mobile-covers-346580-1620679453.jpg",
+      name: `Cool Sporty Xiaomi Redmi 9 Power Mobile Covers`,
+      price: "199",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `179 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/wasnt-me-xiaomi-redmi-9-power-mobile-cover-xiaomi-redmi-9-power-mobile-covers-359425-1620679515.jpg",
+      name: `Wasnt Me Xiaomi Redmi 9 Power Mobile Covers`,
+      price: "249",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `229 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/no-excuses-stripe-xiaomi-redmi-9-power-mobile-cover-xiaomi-redmi-9-power-mobile-covers-359415-1620679491.jpg",
+      name: `No Excuses Stripe Xiaome Redmi 9 Power Mobile`,
+      price: "199",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `179 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/spiderman-red-xiaomi-redmi-9-power-mobile-cover-avl-xiaomi-redmi-9-power-mobile-covers-347154-1617878851.jpg",
+      name: `Spiderman Red Xiaomi Redmi 9 Power Mobile Cover(A..`,
+      price: "249",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `229 For TriBe Members` },
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/metal-gear-blue-xiaomi-redmi-9-power-mobile-cover-xiaomi-redmi-9-power-mobile-covers-359423-1620679508.jpg",
+      name: `Metal Gear Blue Xiaomi Redmi 9 Power Mobile Covers`,
+      price: "249",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `229 For TriBe Members` },
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/naru-xiaomi-redmi-9-power-mobile-cover-471235-1643961747-1.jpg",
+      name: `Naru Xiaomi Redmi 9 Power Mobile Cover`,
+      price: "299",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `279 For TriBe Members` },
+    
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/quirky-camou-xiaomi-redmi-9-power-mobile-cover-472315-1643643842-1.jpg",
+      name: `Quirky Camou Xiaomi Redmi 9 Power Mobile Cover`,
+      price: "299",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `279 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/mickey-dl-hyperprint-camou-xiaomi-redmi-9-power-mobile-cover-472170-1643643806-1.jpg",
+      name: `Mickey(DL) Hyperprint Camou Xiaomi Redmi 9 Power M.. `,
+      price: "249",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `229 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/venom-xiaomi-redmi-9-power-mobile-cover-spl-xiaomi-redmi-9-power-mobile-covers-345494-1620679431.jpg",
+      name: `Venom Xiaomi Redmi 9 Power Mobile Covers(SPL)`,
+      price: "249",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `229 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/comic-page-xiaomi-redmi-9-power-mobile-cover-avl-xiaomi-redmi-9-power-mobile-covers-345496-1620679434.jpg",
+      name: 'Comic Page Xiaomi Redmi 9 Power Mobile Covers (AVL)',
+      price: "249",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `229 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/discover-new-places-xiaomi-redmi-9-power-mobile-cover-xiaomi-redmi-9-power-mobile-covers-345497-1620679435.jpg",
+      name: `Discover New Places Xiaomi Redmi 9 Power Mobile Cover`,
+      price: "249",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `229 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/whatever-it-takes-xiaomi-redmi-9-power-mobile-cover-xiaomi-redmi-9-power-mobile-covers-347137-1617878828.jpg",
+      name: `Whatever It Takes Xiaomi Redmi 9 Power Mobile Cover`,
+      price: "249",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `229 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/mask-man-xiaomi-redmi-9-power-mobile-cover-xiaomi-redmi-9-power-mobile-covers-347145-1617878839.jpg",
+      name: `Mask Man Xiaomi Redmi 9 Power Mobile Cover`,
+      price: "249",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `229 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/they-know-the-way-xiaomi-redmi-9-power-mobile-cover-xiaomi-redmi-9-power-mobile-covers-347139-1617878831.jpg",
+      name: `They Know The Way Xiaomi Redmi 9 Power Mobile Cover`,
+      price: "249",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `229 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/risky-ishq-xiaomi-redmi-9-power-mobile-cover-xiaomi-redmi-9-power-mobile-covers-347140-1620679406.jpg",
+      name: `Risky Ishq Xiaomi Redmi 9 Power Mobile Covers`,
+      price: "249",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `229 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/bong-connection-doodle-xiaomi-redmi-9-power-mobile-cover-xiaomi-redmi-9-power-mobile-covers-346570-1620679443.jpg",
+      name: `Bong Connection Doodle Xiaomi Redmi 9 Power Mobile..`,
+      price: "249",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `229 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/batman-rogue-xiaomi-redmi-9-power-mobile-cover-xiaomi-redmi-9-power-mobile-covers-346577-1620679451.jpg",
+      name: `Batman Rogue Xiaomi Redmi 9 Power Mobile Cover`,
+      price: "249",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `229 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/joint-family-xiaomi-redmi-9-power-mobile-cover-xiaomi-redmi-9-power-mobile-covers-347087-1620679343.jpg",
+      name: `Joint Family Xiaomi Redmi 9 Power Mobile Covers`,
+      price: "249",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `229 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/cool-sporty-xiaomi-redmi-9-power-mobile-cover-xiaomi-redmi-9-power-mobile-covers-346580-1620679453.jpg",
+      name: `Cool Sporty Xiaomi Redmi 9 Power Mobile Covers`,
+      price: "199",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `179 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/wasnt-me-xiaomi-redmi-9-power-mobile-cover-xiaomi-redmi-9-power-mobile-covers-359425-1620679515.jpg",
+      name: `Wasnt Me Xiaomi Redmi 9 Power Mobile Covers`,
+      price: "249",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `229 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/no-excuses-stripe-xiaomi-redmi-9-power-mobile-cover-xiaomi-redmi-9-power-mobile-covers-359415-1620679491.jpg",
+      name: `No Excuses Stripe Xiaome Redmi 9 Power Mobile`,
+      price: "199",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `179 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/spiderman-red-xiaomi-redmi-9-power-mobile-cover-avl-xiaomi-redmi-9-power-mobile-covers-347154-1617878851.jpg",
+      name: `Spiderman Red Xiaomi Redmi 9 Power Mobile Cover(A..`,
+      price: "249",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `229 For TriBe Members` },
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/metal-gear-blue-xiaomi-redmi-9-power-mobile-cover-xiaomi-redmi-9-power-mobile-covers-359423-1620679508.jpg",
+      name: `Metal Gear Blue Xiaomi Redmi 9 Power Mobile Covers`,
+      price: "249",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `229 For TriBe Members` },
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/naru-xiaomi-redmi-9-power-mobile-cover-471235-1643961747-1.jpg",
+      name: `Naru Xiaomi Redmi 9 Power Mobile Cover`,
+      price: "299",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `279 For TriBe Members` },
+    
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/quirky-camou-xiaomi-redmi-9-power-mobile-cover-472315-1643643842-1.jpg",
+      name: `Quirky Camou Xiaomi Redmi 9 Power Mobile Cover`,
+      price: "299",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `279 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/mickey-dl-hyperprint-camou-xiaomi-redmi-9-power-mobile-cover-472170-1643643806-1.jpg",
+      name: `Mickey(DL) Hyperprint Camou Xiaomi Redmi 9 Power M.. `,
+      price: "249",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `229 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/venom-xiaomi-redmi-9-power-mobile-cover-spl-xiaomi-redmi-9-power-mobile-covers-345494-1620679431.jpg",
+      name: `Venom Xiaomi Redmi 9 Power Mobile Covers(SPL)`,
+      price: "249",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `229 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/comic-page-xiaomi-redmi-9-power-mobile-cover-avl-xiaomi-redmi-9-power-mobile-covers-345496-1620679434.jpg",
+      name: 'Comic Page Xiaomi Redmi 9 Power Mobile Covers (AVL)',
+      price: "249",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `229 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/discover-new-places-xiaomi-redmi-9-power-mobile-cover-xiaomi-redmi-9-power-mobile-covers-345497-1620679435.jpg",
+      name: `Discover New Places Xiaomi Redmi 9 Power Mobile Cover`,
+      price: "249",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `229 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/whatever-it-takes-xiaomi-redmi-9-power-mobile-cover-xiaomi-redmi-9-power-mobile-covers-347137-1617878828.jpg",
+      name: `Whatever It Takes Xiaomi Redmi 9 Power Mobile Cover`,
+      price: "249",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `229 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/mask-man-xiaomi-redmi-9-power-mobile-cover-xiaomi-redmi-9-power-mobile-covers-347145-1617878839.jpg",
+      name: `Mask Man Xiaomi Redmi 9 Power Mobile Cover`,
+      price: "249",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `229 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/they-know-the-way-xiaomi-redmi-9-power-mobile-cover-xiaomi-redmi-9-power-mobile-covers-347139-1617878831.jpg",
+      name: `They Know The Way Xiaomi Redmi 9 Power Mobile Cover`,
+      price: "249",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `229 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/risky-ishq-xiaomi-redmi-9-power-mobile-cover-xiaomi-redmi-9-power-mobile-covers-347140-1620679406.jpg",
+      name: `Risky Ishq Xiaomi Redmi 9 Power Mobile Covers`,
+      price: "249",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `229 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/bong-connection-doodle-xiaomi-redmi-9-power-mobile-cover-xiaomi-redmi-9-power-mobile-covers-346570-1620679443.jpg",
+      name: `Bong Connection Doodle Xiaomi Redmi 9 Power Mobile..`,
+      price: "249",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `229 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/batman-rogue-xiaomi-redmi-9-power-mobile-cover-xiaomi-redmi-9-power-mobile-covers-346577-1620679451.jpg",
+      name: `Batman Rogue Xiaomi Redmi 9 Power Mobile Cover`,
+      price: "249",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `229 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/joint-family-xiaomi-redmi-9-power-mobile-cover-xiaomi-redmi-9-power-mobile-covers-347087-1620679343.jpg",
+      name: `Joint Family Xiaomi Redmi 9 Power Mobile Covers`,
+      price: "249",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `229 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/cool-sporty-xiaomi-redmi-9-power-mobile-cover-xiaomi-redmi-9-power-mobile-covers-346580-1620679453.jpg",
+      name: `Cool Sporty Xiaomi Redmi 9 Power Mobile Covers`,
+      price: "199",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `179 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/wasnt-me-xiaomi-redmi-9-power-mobile-cover-xiaomi-redmi-9-power-mobile-covers-359425-1620679515.jpg",
+      name: `Wasnt Me Xiaomi Redmi 9 Power Mobile Covers`,
+      price: "249",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `229 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/no-excuses-stripe-xiaomi-redmi-9-power-mobile-cover-xiaomi-redmi-9-power-mobile-covers-359415-1620679491.jpg",
+      name: `No Excuses Stripe Xiaome Redmi 9 Power Mobile`,
+      price: "199",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `179 For TriBe Members` }
+      ,
+      {
+      mainImg:
+        "https://images.bewakoof.com/t320/spiderman-red-xiaomi-redmi-9-power-mobile-cover-avl-xiaomi-redmi-9-power-mobile-covers-347154-1617878851.jpg",
+      name: `Spiderman Red Xiaomi Redmi 9 Power Mobile Cover(A..`,
+      price: "249",
+      strikeOffPrice: "499",
+      stock: "",
+      offer: `229 For TriBe Members` },
+    ]
+    
+    var L = obj.length 
+   count  = document.querySelector("#count") ;
+   count.innerText = L ;
+   
+   
+    
+       obj.map(function(item){
+        productDiv = document.createElement("div") ;
+        productDiv.setAttribute("id","productMat");
+       productDiv.addEventListener("click",function(){
+         bookingPage(item)
+       })
+
+
+
+
+        img = document.createElement("img");
+        img.src = item.mainImg
+        h3 = document.createElement("h3") ;
+        h3.innerText = item.name ;
+        h3.style.fontSize = "16px"
+        span = document.createElement("span");
+        span.innerText = "₹"
+        // span.setAttribute("id","strikeOf") ;
+        b =  document.createElement("b") ;
+        b.innerText = item.price ;
+        span.append(b) ;
+
+        span2 = document.createElement("span") ;
+        span2.setAttribute("class" ,"priceOf") ;
+        span2.innerText = item.strikeOffPrice
+        
+        offerDiv = document.createElement("div") ;
+        offerDiv.setAttribute("id","offerDiv")
+        offerDiv.innerText = item.offer ;
+        offerDiv.style.backgroundColor = "#f4f4f4" ;
+
+        // button = document.createElement("button")
+        // button.innerText = "Add To Cart" ;
+        // button.addEventListener("click",function(){
+        //   localStoreItem(item)
+        // })
+
+
+
+        productDiv.append(img,h3,span,span2,offerDiv)
+        document.querySelector("#product_container").append(productDiv)
+       })
+
+       function localStoreItem(item){
+         cartItems.push(item)
+        //  console.log(cartItems)
+         event.target.innerText = "Item Added" ;
+         localStorage.setItem("cart",JSON.stringify(cartItems))
+       }
+
+       function bookingPage(ele){
+    var bookingItem=[];
+    bookingItem.push(ele)
+    localStorage.setItem('bookItem',JSON.stringify(bookingItem))
+    window.location.href = "bookingCoverP.html";
+  }
+        
+       
+       
+       
+       // document.querySelector("#product_container").append(obj)
+</script>

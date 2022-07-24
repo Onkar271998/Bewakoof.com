@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="index.css" />
+    <script
+      src="https://kit.fontawesome.com/e9a5a74c45.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        font-family: "Montserrat", sans-serif;
+        box-sizing: border-box;
+      }
+      .header {
+        height: 100px;
+        width: 100%;
+        background-color: black;
+      }
+      .container {
+        /* border: 2px solid black; */
+        width: 75%;
+        height: 800px;
+        margin: auto;
+        display: flex;
+        margin-top: 20px;
+      }
+      .rightBox {
+        /* border: 2px solid red; */
+        width: 50%;
+        height: 600px;
+        padding: 0px 25px 0px 25px;
+      }
+      .leftBox {
+        /* border: 2px solid blue; */
+        width: 50%;
+        height: 600px;
+        display: flex;
+        align-items: center;
+      }
+      .multiImg {
+        /* border: 2px solid blue; */
+        width: 20%;
+        height: 100%;
+        padding-right: 20px;
+        align-items: center;
+      }
+      .singleImg {
+        /* border: 2px solid blue; */
+        width: 80%;
+        height: 100%;
+      }
+      .company {
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 25px;
+        /* margin-bottom: 5px; */
+      }
+      .singleImg img {
+        width: 100%;
+        height: auto;
+      }
+      .priceDiv {
+        display: flex;
+        margin-top: 5px;
+        font-size: 19px;
+      }
+      .size {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 18px;
+        font-size: 14px;
+        font-weight: 600;
+      }
+      .sizeBox {
+        display: flex;
+      }
+      .sizeBox div {
+        height: 50px;
+        width: 50px;
+        border: 1px solid black;
+        margin-top: 15px;
+        margin-right: 10px;
+        border-radius: 5px;
+        text-align: center;
+        padding-top: 13px;
+        font-weight: 20;
+      }
+      .bagDiv {
+        display: flex;
+        margin-top: 30px;
+      }
+      .bagDiv div {
+        border: 2px solid #42a2a2;
+      }
+      .dummyP {
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 0px 15px 0px;
+        /* line-height: 18px; */
+      }
+      .dummy {
+        font-size: 14px;
+        font-weight: 575;
+      }
+      .dummy > p {
+        font-weight: 800;
+      }
+      .memberOffer {
+        font-size: 13px;
+        color: rgb(40, 40, 40);
+      }
+      .name {
+        /* color: gray; */
+        font-size: 15px;
+        line-height: 20px;
+        margin-top: 2px;
+        color: gray;
+      }
+      .addToBag {
+        width: 300px;
+        color: white;
+        background-color: #42a2a2;
+      }
+      .bagDiv > div {
+        padding: 12px;
+        margin-right: 10px;
+        border-radius: 5px;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .addToBag {
+        width: 85%;
+      }
+      .multiImg {
+        align-items: center;
+        padding-top: 30px;
+      }
+      .tax {
+        font-size: 11px;
+        color: gray;
+        margin-bottom: 13px;
+      }
+      .size > p:nth-child(2) {
+        color: #42a2a2;
+        text-decoration: underline;
+        font-size: 15px;
+      }
+      .imgOne,
+      .imgTwo,
+      .imgThree,
+      .imgFour {
+        width: 100%;
+        /* width: 20px; */
+        height: auto;
+        height: 125px;
+        /* border: 2px solid red; */
+        margin-bottom: 8px;
+      }
+      .subImage {
+        width: 100%;
+        height: auto;
+      }
+      .dummyP > p:nth-child(2) {
+        font-size: 20px;
+        font-weight: 900px;
+      }
+      .stikeOffPrice {
+        color: gray;
+        text-decoration: line-through;
+        padding-left: 10px;
+      }
+      .discount {
+        color: red;
+        font-weight: 50;
+        padding-left: 10px;
+      }
+      .memberOfferDiv {
+        padding: 10px 0px 10px 0px;
+        display: flex;
+      }
+      .learn {
+        color: #42a2a2;
+        font-size: 10px;
+      }
+      .pageLocation {
+        margin-left: 180px;
+        margin-top: 20px;
+      }
+      .rightBox {
+        /* border: 2px solid red; */
+        width: 50%;
+        height: 600px;
+        padding: 0px 25px 0px 25px;
+      }
+      .rupeeLogo {
+        padding-left: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- staring of header -->
+    <div id="topbar">
+      <div class="left">
+        <div>
+          <a href="">Offer</a>
+          <a href="">Fanbook</a>
+          <a href=""
+            ><i class="fa fa-mobile" aria-hidden="true"></i> Download app</a
+          >
+          <a href="">TriBe Membership</a>
+        </div>
+      </div>
+      <div class="right">
+        <a href="">Contact Us</a>
+        <a href=""
+          ><i class="fa fa-truck" aria-hidden="true"></i> Track Order</a
+        >
+      </div>
+    </div>
+
+    <div id="navbar">
+        <div class="navleft">
+          <div id="p-logo">
+              <a href="menPage.html"><img src="./image/bewakoof-primary-logo-white-bg-2x-1635745564.png" alt=""></a>
+          </div>
+          <div>
+              <a href="menPage.html">MEN</a>
+              <div class="Msub-menu">
+                  <ul> <h3>Top Wears</h3>
+                      <li>T-Shirts</li>
+                      <li>Shirts</li>
+                      <li>Jackets</li>
+                      <li>Sweater</li>
+                  </ul>
+              </div>
+          </div>
+          <div>
+              <a href="womenPage.html">WOMEN</a>
+              <div class="Msub-menu">
+                <ul> <h3>Top Wears</h3>
+                    <li>T-Shirts</li>
+                    <li>Top</li>
+                    <li>Kurti</li>
+                    <li>Plazo</li>
+                </ul> 
+            </div>
+    
+              
+          </div>
+          <div>
+              <a href="Mobile_main_page.html">MOBILE COVERS</a>
+              <div class="Msub-menu">
+                <ul> <h3>Top Covers</h3>
+                    <li>Xiaomi</li>
+                    <li>One Plus</li>
+                    <li>Apple</li>
+                    <li>Readmi</li>
+                </ul>
+            </div>
+          </div>
+      </div>
+        <div class="navright">
+            <div class="searchForm">
+                <form class="navForm">
+                    <i id="searchIcon" class="fa fa-search" aria-hidden="true"></i>
+                    <input type="text" name="" id="search" placeholder="Seach by Catagory, Product or collection" |>
+                </form>
+            </div>
+            <div>
+                <a href="/login.html"> signUp/Login</a>
+            </div>
+            <div>
+                <a href="#"> <i class="fa fa-heart-o" aria-hidden="true"></i>
+                </a>
+            </div>
+            <div>
+                <a href="/Cart.html"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- end of header -->
+    <!-- <p>BOOKING PAGE</p> -->
+    <!-- <div class="header"></div> -->
+    <p class="pageLocation">Mobile Covers / Xiaomi </p>
+    <div class="container">
+      <div class="leftBox">
+        <div class="multiImg">
+          <div class="imgOne"></div>
+          <div class="imgTwo"></div>
+          <div class="imgThree"></div>
+          <div class="imgFour"></div>
+        </div>
+        <div class="singleImg"></div>
+      </div>
+      <div class="rightBox">
+        <h2 class="company">BEWAKOOF</h2>
+        <p class="name"></p>
+        <div class="priceDiv">
+            <p class="rupeeLogo">₹</p>
+          <p class="price"> </p>
+          <p class="rupeeLogo">₹</p>
+          <p class="stikeOffPrice"></p>
+          <p class="discount"></p>
+        </div>
+        <p class="tax">Inclusive of taxes</p>
+        <hr />
+        <div class="memberOfferDiv">
+          <p class="memberOffer">
+            TriBe member get an extra discount of <b>20</b> and FREE shipping.
+          </p>
+          <p class="learn">Learn more</p>
+        </div>
+        <hr />
+        
+        <div class="bagDiv">
+          <!-- heart -->
+          <div>
+            <i class="fa fa-heart-o heart" aria-hidden="true"></i>
+          </div>
+          <div class="addToBag">ADD TO BAG</div>
+        </div>
+        <hr />
+        <div class="dummyP">
+          <p class="dummy">SAVE EXTRA WITH 4 OFFERS</p>
+          <p class="dummy">+</p>
+        </div>
+        <hr />
+        <div class="dummyP">
+          <p class="dummy">PRODUCT DESCRIPTION</p>
+          <p class="dummy">+</p>
+        </div>
+        <hr />
+        <div class="dummyP">
+          <p class="dummy">15 DAY RETURNS & EXCHANGE</p>
+          <p class="dummy">+</p>
+        </div>
+        <hr />
+        <div class="dummyP">
+          <p class="dummy">DELIVERY DETAILS</p>
+          <p class="dummy">+</p>
+        </div>
+        <hr />
+      </div>
+      <!-- <hr /> -->
+    </div>
+  </body>
+</html>
+
+<script>
+  // getting the item from local storage
+  var item = JSON.parse(localStorage.getItem("bookItem"));
+  // console.log(item);
+
+  // displaying the element of the item
+  item.map(function (ele) {
+    //// getting main image
+    var img = document.createElement("img");
+    img.src = ele.mainImg;
+    document.querySelector(".singleImg").append(img);
+    //// getting item name
+    var name = document.createElement("p");
+    name.innerText = ele.name;
+    document.querySelector(".name").append(name);
+    //// getting price
+    var price = document.createElement("p");
+    price.innerText = ele.price;
+    document.querySelector(".price").append(price);
+    //// getting strikeOffPrice
+    var strike = document.createElement("p");
+    strike.innerText = ele.strikeOffPrice;
+    document.querySelector(".stikeOffPrice").append(strike);
+    // // getting sub images
+    //// getting sub image one
+//     var imgOne = document.createElement("img");
+//     imgOne.src = ele.subImgOne;
+//     imgOne.setAttribute("class", "subImage");
+//     document.querySelector(".imgOne").append(imgOne);
+//     // calling the function
+//     imgOne.addEventListener("click", function () {
+//       changeImgOne(ele);
+//     });
+//     //// getting sub image two
+//     var imgTwo = document.createElement("img");
+//     imgTwo.src = ele.subImgTwo;
+//     imgTwo.setAttribute("class", "subImage");
+//     document.querySelector(".imgTwo").append(imgTwo);
+//     // calling the function
+//     imgTwo.addEventListener("click", function () {
+//       changeImgTwo(ele);
+//     });
+//     //// getting sub image three
+//     var imgThree = document.createElement("img");
+//     imgThree.src = ele.subImgThree;
+//     imgThree.setAttribute("class", "subImage");
+//     document.querySelector(".imgThree").append(imgThree);
+//     // calling the function
+//     imgThree.addEventListener("click", function () {
+//       changeImgThree(ele);
+//     });
+//     //// getting sub image four
+//     var imgFour = document.createElement("img");
+//     imgFour.src = ele.subImgFour;
+//     imgFour.setAttribute("class", "subImage");
+//     document.querySelector(".imgFour").append(imgFour);
+//     // calling the function
+//     imgFour.addEventListener("click", function () {
+//       changeImgFour(ele);
+//     });
+  })
+
+  // discount
+  var a = document.querySelector(".price").innerText;
+  // console.log(a);
+  var b = document.querySelector(".stikeOffPrice").innerText;
+  var discount = Math.floor(((b - a) / b) * 100);
+  discountValue = `(${discount}% OFF)`;
+  // console.log(discount);
+  document.querySelector(".discount").append(discountValue);
+
+  //// changing the main image
+  // one image
+  function changeImgOne(ele) {
+    var selectedImg = document.querySelector(".imgOne").innerHTML;
+    document.querySelector(".singleImg").innerHTML = selectedImg;
+  }
+  // two image
+  function changeImgTwo(ele) {
+    var selectedImg = document.querySelector(".imgTwo").innerHTML;
+    document.querySelector(".singleImg").innerHTML = selectedImg;
+  }
+  // three image
+  function changeImgThree(ele) {
+    var selectedImg = document.querySelector(".imgThree").innerHTML;
+    document.querySelector(".singleImg").innerHTML = selectedImg;
+  }
+  // four image
+  function changeImgFour(ele) {
+    var selectedImg = document.querySelector(".imgFour").innerHTML;
+    document.querySelector(".singleImg").innerHTML = selectedImg;
+  }
+
+  ////adding to cart
+  var cartData = JSON.parse(localStorage.getItem("cart")) || [];
+  //listening the event
+  document.querySelector(".addToBag").addEventListener("click", addingToCart);
+  // function to add the item to cart
+  function addingToCart(ele) {
+    cartData.push(item[0]);
+    console.log(cartData);
+    localStorage.setItem("cart", JSON.stringify(cartData));
+    window.location.reload();
+  }
+
+  // go to home
+// document.querySelector(".p-logo").addEventListener("click", goToHome);
+// function goToHome() {
+//   window.location.href = "index.html";
+// }
+</script>

@@ -1,0 +1,309 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+#topbar {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  font-family: montserrat, sans-serif;
+  position: sticky;
+  top: 0;
+}
+#topbar a:hover {
+  color: gray;
+}
+/* left part */
+.left {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #eee;
+  height: 20px;
+  box-sizing: border-box;
+  padding: 3px;
+  margin-left: -140px;
+  font-size: 12px;
+}
+.left a {
+  text-decoration: none;
+  color: #333333;
+  margin: 14px;
+}
+
+/* right part */
+.right {
+  display: flex;
+  justify-content: right;
+  background-color: #eee;
+  box-sizing: border-box;
+  height: 20px;
+  padding: 3px;
+  font-size: 12px;
+}
+.right a {
+  text-decoration: none;
+  color: #333333;
+  margin-right: 3rem;
+}
+/* Navbar */
+
+#navbar {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 0px;
+  padding-top: 5px;
+  font-family: montserrat, sans-serif;
+  border-bottom: #5c5a5a 1px solid;
+  background-color: white;
+  position: sticky;
+  top: 20px;
+  cursor: pointer;
+  font-size: 14px;
+}
+#navbar a:hover {
+  color: cyan;
+}
+.navleft {
+  display: flex;
+  justify-content: space-evenly;
+  box-sizing: border-box;
+  padding: 5px;
+  /* margin-top: 10px; */
+  align-items: center;
+  font-size: 14px;
+}
+#p-logo {
+  margin-top: 0px;
+}
+#p-logo img {
+  width: 150px;
+  padding: 2px;
+}
+.navleft a {
+  text-decoration: none;
+  color: #333333;
+}
+.Msub-menu {
+  display: none;
+  margin-top: 20px;
+  position: sticky;
+  top: 30px;
+}
+.navleft a:hover + .Msub-menu {
+  display: block;
+  position: absolute;
+  background-color: rgb(250, 195, 15);
+  opacity: 0.7;
+  color: BLACK;
+  position: stiky;
+}
+.Msub-menu ul {
+  list-style: none;
+  display: block;
+  margin-top: 15px;
+}
+.Msub-menu ul li {
+  width: 150px;
+  padding: 10px;
+  background: transparent;
+  text-align: center;
+}
+.Msub-menu ul h4 {
+  text-align: center;
+  border-bottom: 1px dotted;
+}
+
+.navright {
+  display: flex;
+  justify-content: right;
+  margin-right: 30px;
+  box-sizing: border-box;
+  padding: 7px;
+  margin-bottom: px;
+  margin-top: 0px;
+  align-items: center;
+}
+.navright a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #333333;
+  margin: 15px;
+}
+#search {
+  width: 240px;
+  height: 10px;
+  text-align: center;
+  font-size: 12px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #eee;
+  padding: 15px;
+}
+
+#search:focus {
+  outline: none;
+}
+.searchForm {
+  border-radius: 5px;
+  border: 1px solid;
+  background-color: #eee;
+}
+.navForm {
+  border-radius: 10px;
+  margin-left: 10px;
+}
+
+/* in between mid and nav */
+
+.inbtwn {
+  margin-top: 10px;
+  height: 75px;
+  width: auto;
+  background-image: url(./image/Gender-Picker-Banner-desktop-header-v1.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* mid body */
+#mid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 80vh;
+  cursor: pointer;
+}
+.midleft {
+  display: flex;
+  justify-content: center;
+  background-image: url(./image/Gender-Picker-Banner-desktop-men-v1.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.midright {
+  display: flex;
+  justify-content: center;
+  background-image: url(./image/Gender-Picker-Banner-desktop-women-v1.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.blwmid {
+  height: 65px;
+  width: auto;
+  background-image: url(./image/Gender-Picker-Banner-desktop-footer-v1.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 500px;
+  color: yellow;
+  background: black;
+  margin-top: 20px;
+  font-family: montserrat, sans-serif;
+  box-sizing: border-box;
+}
+.fleft {
+  padding: 30px;
+  align-items: center;
+}
+.flogo {
+  margin-top: 20px;
+  height: 50px;
+  display: flex;
+}
+
+.flogo a {
+  text-decoration: none;
+  color: yellow;
+  font-size: 35px;
+}
+.flinside {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  width: 430px;
+  margin-top: 20px;
+}
+.flinside ul li {
+  list-style: none;
+  padding: 3px;
+}
+.flinside a {
+  text-decoration: none;
+  color: antiquewhite;
+  font-size: 14px;
+}
+.return_cash {
+  padding: 3px;
+  margin-top: 4rem;
+}
+
+.fcenter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 7rem;
+  padding: auto;
+}
+.fcenter a {
+  text-decoration: none;
+  color: antiquewhite;
+  padding: 5px;
+}
+.fcenter h4 {
+  padding: 10px;
+}
+.fright {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin-top: 7.5rem;
+  margin-left: 70px;
+}
+.email {
+  background-color: black;
+  border: none;
+  border-bottom: 0.5px solid yellow;
+  margin: 25px 0px 0px 0px;
+  font-size: 18px;
+  color: antiquewhite;
+}
+.email:focus {
+  outline: none;
+}
+#btn {
+  margin-left: 13rem;
+  margin-top: -43px;
+  width: 150px;
+  height: 45px;
+  font-family: montserrat, sans-serif;
+  padding: 4px;
+  background-color: yellow;
+}
+.downappIcon.img {
+  width: 150px;
+  height: 50px;
+  padding: 5px;
+}
+.payment {
+  margin-top: 4.5rem;
+  padding: 2px;
+  margin-bottom: 5px;
+}
+.py-img {
+  margin-top: 30px;
+}
+/* for medium screen */
+@media only screen and (max-width: 1100px) {
+  .left {
+    flex-direction: column;
+  }
+  .right {
+    flex-direction: column;
+  }
+  .topbar {
+    display: none;
+  }
+}
